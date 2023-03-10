@@ -1,0 +1,179 @@
+﻿@model IEnumerable<ECOTRAVEL_MVC.Models.LogementModelView.LogementListItem>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LogNom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogBoite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogRue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogPays)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogCoorLatitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogCoorLongitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogDescriptionCourte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogDescriptionLongue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogChambre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogPiece)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogCapacite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogSalledeBain)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogWc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogBalcon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogAirConditionne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogWifi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogMinibar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogAnimaux)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogPiscine)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogVoiturier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogRoomService)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogPrix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idTypeLogement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idProprietaire)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogNom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogBoite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogRue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogPays)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogCoorLatitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogCoorLongitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogDescriptionCourte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogDescriptionLongue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogChambre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogPiece)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogCapacite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogSalledeBain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogWc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogBalcon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogAirConditionne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogWifi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogMinibar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogAnimaux)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogPiscine)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogVoiturier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogRoomService)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogPrix)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idTypeLogement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idProprietaire)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.idLogement }) |
+                @Html.ActionLink("Details", "Details", new { id=item.idLogement}) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idLogement})
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ECOTRAVEL_MVC.Models.ReservationModelView.ReservationListItem>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ResCheckIn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResCheckOut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResAdulte)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResEnfant)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResAssusrance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResDateAnnulation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResAnnulationProprietaire)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idIndisponible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idLogement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.idClient)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResCheckIn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResCheckOut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResAdulte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResEnfant)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResAssusrance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResDateAnnulation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResAnnulationProprietaire)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idIndisponible)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idLogement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.idClient)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idReservation }) |
+                @Html.ActionLink("Details", "Details", new { id = item.idReservation }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.idReservation })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

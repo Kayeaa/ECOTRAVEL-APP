@@ -1,0 +1,48 @@
+﻿@model ECOTRAVEL_MVC.Models.ReservationModelView.ReservationCreateForm
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ReservationCreateForm</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ResCheckIn" class="control-label"></label>
+                <input asp-for="ResCheckIn" class="form-control" />
+                <span asp-validation-for="ResCheckIn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResCheckOut" class="control-label"></label>
+                <input asp-for="ResCheckOut" class="form-control" />
+                <span asp-validation-for="ResCheckOut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResAdulte" class="control-label"></label>
+                <input asp-for="ResAdulte" class="form-control" />
+                <span asp-validation-for="ResAdulte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ResEnfant" class="control-label"></label>
+                <input asp-for="ResEnfant" class="form-control" />
+                <span asp-validation-for="ResEnfant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,168 @@
+﻿@model ECOTRAVEL_MVC.Models.LogementModelView.LogementDetails
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>LogementDetails</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogNom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogNom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogBoite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogBoite)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogNum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogNum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogRue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogRue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogPays)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogPays)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogCoorLatitude)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogCoorLatitude)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogCoorLongitude)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogCoorLongitude)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogDescriptionCourte)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogDescriptionCourte)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogDescriptionLongue)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogDescriptionLongue)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogChambre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogChambre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogPiece)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogPiece)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogCapacite)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogCapacite)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogSalledeBain)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogSalledeBain)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogWc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogWc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogBalcon)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogBalcon)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogAirConditionne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogAirConditionne)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogWifi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogWifi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogMinibar)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogMinibar)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogAnimaux)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogAnimaux)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogPiscine)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogPiscine)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogVoiturier)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogVoiturier)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogRoomService)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogRoomService)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LogPrix)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LogPrix)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.idTypeLogement)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.idTypeLogement)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.idProprietaire)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.idProprietaire)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idLogement }) |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,153 @@
+﻿@model ECOTRAVEL_MVC.Models.LogementModelView.LogementCreateForm
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>LogementCreateForm</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LogNom" class="control-label"></label>
+                <input asp-for="LogNom" class="form-control" />
+                <span asp-validation-for="LogNom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogBoite" class="control-label"></label>
+                <input asp-for="LogBoite" class="form-control" />
+                <span asp-validation-for="LogBoite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogNum" class="control-label"></label>
+                <input asp-for="LogNum" class="form-control" />
+                <span asp-validation-for="LogNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogRue" class="control-label"></label>
+                <input asp-for="LogRue" class="form-control" />
+                <span asp-validation-for="LogRue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogPays" class="control-label"></label>
+                <input asp-for="LogPays" class="form-control" />
+                <span asp-validation-for="LogPays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogCoorLatitude" class="control-label"></label>
+                <input asp-for="LogCoorLatitude" class="form-control" />
+                <span asp-validation-for="LogCoorLatitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogCoorLongitude" class="control-label"></label>
+                <input asp-for="LogCoorLongitude" class="form-control" />
+                <span asp-validation-for="LogCoorLongitude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogDescriptionCourte" class="control-label"></label>
+                <input asp-for="LogDescriptionCourte" class="form-control" />
+                <span asp-validation-for="LogDescriptionCourte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogDescriptionLongue" class="control-label"></label>
+                <input asp-for="LogDescriptionLongue" class="form-control" />
+                <span asp-validation-for="LogDescriptionLongue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogChambre" class="control-label"></label>
+                <input asp-for="LogChambre" class="form-control" />
+                <span asp-validation-for="LogChambre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogPiece" class="control-label"></label>
+                <input asp-for="LogPiece" class="form-control" />
+                <span asp-validation-for="LogPiece" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogCapacite" class="control-label"></label>
+                <input asp-for="LogCapacite" class="form-control" />
+                <span asp-validation-for="LogCapacite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogSalledeBain" class="control-label"></label>
+                <input asp-for="LogSalledeBain" class="form-control" />
+                <span asp-validation-for="LogSalledeBain" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogWc" class="control-label"></label>
+                <input asp-for="LogWc" class="form-control" />
+                <span asp-validation-for="LogWc" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogBalcon" /> @Html.DisplayNameFor(model => model.LogBalcon)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogAirConditionne" /> @Html.DisplayNameFor(model => model.LogAirConditionne)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogWifi" /> @Html.DisplayNameFor(model => model.LogWifi)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogMinibar" /> @Html.DisplayNameFor(model => model.LogMinibar)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogAnimaux" /> @Html.DisplayNameFor(model => model.LogAnimaux)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogPiscine" /> @Html.DisplayNameFor(model => model.LogPiscine)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogVoiturier" /> @Html.DisplayNameFor(model => model.LogVoiturier)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="LogRoomService" /> @Html.DisplayNameFor(model => model.LogRoomService)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogPrix" class="control-label"></label>
+                <input asp-for="LogPrix" class="form-control" />
+                <span asp-validation-for="LogPrix" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idTypeLogement" class="control-label"></label>
+                <input asp-for="idTypeLogement" class="form-control" />
+                <span asp-validation-for="idTypeLogement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="idProprietaire" class="control-label"></label>
+                <input asp-for="idProprietaire" class="form-control" />
+                <span asp-validation-for="idProprietaire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

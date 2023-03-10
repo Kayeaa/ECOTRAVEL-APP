@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>ECOTRAVEL_ADO_DB</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{00e3db06-61d2-4be1-90c0-8981a1fa47de}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>ECOTRAVEL_ADO_DB</RootNamespace>
+    <AssemblyName>ECOTRAVEL_ADO_DB</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Views" />
+    <Folder Include="Stored Procedures" />
+    <Folder Include="Stored Procedures\Client" />
+    <Folder Include="Stored Procedures\Logement" />
+    <Folder Include="Stored Procedures\Reservation" />
+    <Folder Include="Stored Procedures\Avis" />
+    <Folder Include="Stored Procedures\Facture" />
+    <Folder Include="Stored Procedures\Indisponible" />
+    <Folder Include="Stored Procedures\TypeLogement" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Client.sql" />
+    <Build Include="Tables\Proprietaire.sql" />
+    <Build Include="Tables\TypeLogement.sql" />
+    <Build Include="Tables\Photo.sql" />
+    <Build Include="Tables\Logement.sql" />
+    <Build Include="Tables\Indisponible.sql" />
+    <Build Include="Tables\Reservation.sql" />
+    <Build Include="Tables\Facture.sql" />
+    <Build Include="Tables\Avis.sql" />
+    <Build Include="Stored Procedures\Client\SP_ClientAdd.sql" />
+    <Build Include="Stored Procedures\Logement\SP_LogementAdd.sql" />
+    <Build Include="Stored Procedures\Reservation\SP_ReservationAdd.sql" />
+    <Build Include="Stored Procedures\Avis\SP_AvisAdd.sql" />
+    <Build Include="Stored Procedures\Facture\SP_FactureAdd.sql" />
+    <Build Include="Stored Procedures\Indisponible\SP_IndisponibleAdd.sql" />
+    <Build Include="Stored Procedures\TypeLogement\SP_TypeLogementAdd.sql" />
+    <Build Include="Stored Procedures\Client\SP_ClientCheck.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ECOTRAVEL-ADO-DB.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ECOTRAVEL-ADO-DB.publish.xml" />
+  </ItemGroup>
+</Project>
