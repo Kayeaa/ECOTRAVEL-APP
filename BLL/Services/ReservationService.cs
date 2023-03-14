@@ -13,6 +13,11 @@ namespace BLL.Services
     {
         private readonly IReservationRepository<DAL.Entities.Reservation, int> _repository;
 
+        public ReservationService(IReservationRepository<DAL.Entities.Reservation, int> repository)
+        {
+            _repository = repository;
+        }
+
         public IEnumerable<Reservation> Get()
         {
             return _repository.Get().Select(e => e.ToBLL());

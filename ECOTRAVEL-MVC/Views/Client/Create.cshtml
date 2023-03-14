@@ -1,0 +1,63 @@
+﻿@model ECOTRAVEL_MVC.Models.ClientModelView.ClientCreateForm
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>ClientCreateForm</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CliNom" class="control-label"></label>
+                <input asp-for="CliNom" class="form-control" />
+                <span asp-validation-for="CliNom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CliPrenom" class="control-label"></label>
+                <input asp-for="CliPrenom" class="form-control" />
+                <span asp-validation-for="CliPrenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CliEmail" class="control-label"></label>
+                <input asp-for="CliEmail" class="form-control" />
+                <span asp-validation-for="CliEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CliPays" class="control-label"></label>
+                <input asp-for="CliPays" class="form-control" />
+                <span asp-validation-for="CliPays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CliTelephone" class="control-label"></label>
+                <input asp-for="CliTelephone" class="form-control" />
+                <span asp-validation-for="CliTelephone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CliPassword" class="control-label"></label>
+                <input asp-for="CliPassword" class="form-control" />
+                <span asp-validation-for="CliPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="confirmPass" class="control-label"></label>
+                <input asp-for="confirmPass" class="form-control" />
+                <span asp-validation-for="confirmPass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

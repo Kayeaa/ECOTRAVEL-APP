@@ -1,0 +1,48 @@
+﻿@model ECOTRAVEL_MVC.Models.ClientModelView.ClientDetails
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ClientDetails</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CliNom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CliNom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CliPrenom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CliPrenom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CliEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CliEmail)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CliTelephone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CliTelephone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CliPays)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CliPays)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idClient }) |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,5 +1,7 @@
 ﻿using BLL.Entities;
 using Common.Repositories;
+using ECOTRAVEL_MVC.Handlers;
+using ECOTRAVEL_MVC.Models.ClientModelView;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -27,7 +29,13 @@ namespace ECOTRAVEL_MVC.Controllers
         // GET: ClientController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            ClientDetails model = _services.Get(id).ToDetails();
+            if (model is null)
+            {
+                TempData["Error"] = "Client non trouvé...";
+                return RedirectToAction("Index");
+            }
+            return View(model);
         }
 
         // GET: ClientController/Create

@@ -36,10 +36,24 @@ namespace ECOTRAVEL_MVC.Handlers
                 CliEmail = entity.CliEmail,
                 CliPays = entity.CliPays,
                 CliTelephone = entity.CliTelephone,
-                CliPassword = entity.CliPassword,
+                CliPassword = entity.CliPassword
 
             };
         }
+
+        public static ClientDetails ToDetails(this Client entity)
+        {
+            if (entity is null) return null;
+            return new ClientDetails()
+            {
+                CliNom = entity.CliNom,
+                CliPrenom = entity.CliPrenom,
+                CliEmail = entity.CliEmail,
+                CliPays = entity.CliPays,
+                CliTelephone = entity.CliTelephone
+            };
+        }
+
         //LOGEMENT
         public static LogementListItem ToListItem(this Logement entity)
         {

@@ -24,7 +24,7 @@ namespace DAL.Services
             {
                 using (SqlCommand command = connection.CreateCommand())
                 {
-                    command.CommandText = "SELECT [idLogement], [nom], [boite], [numero], [rue], [pays], [coordLatitude], [coordLongitude], [desciptionCourte], [descriptionLongue], [chambre], [piece], [capacite], [salledeBain], [wc], [balcon], [airConcitionne], [wifi], [minibar], [animaux], [piscine], [voiturier], [roomService], [idTypeLogement], [idProprietaire] FROM [Logement]";
+                    command.CommandText = "SELECT [idLogement], [nom], [boite], [numero], [rue], [pays], [coordLatitude], [coordLongitude], [descriptionCourte], [descriptionLongue], [chambre], [piece], [capacite], [salledeBain], [wc], [balcon], [airConditionne], [wifi], [minibar], [animaux], [piscine], [voiturier], [roomService], [idTypeLogement], [idProprietaire] FROM [Logement]";
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
@@ -43,7 +43,7 @@ namespace DAL.Services
             {
                 using (SqlCommand command = connection.CreateCommand())
                 {
-                    command.CommandText = "SELECT [idLogement], [nom], [boite], [numero], [rue], [pays], [coordLatitude], [coordLongitude], [desciptionCourte], [descriptionLongue], [chambre], [piece], [capacite], [salledeBain], [wc], [balcon], [airConcitionne], [wifi], [minibar], [animaux], [piscine], [voiturier], [roomService], [idTypeLogement], [idProprietaire] FROM [Logement] WHERE [idLogement] = @id";
+                    command.CommandText = "SELECT [idLogement], [nom], [boite], [numero], [rue], [pays], [coordLatitude], [coordLongitude], [descriptionCourte], [descriptionLongue], [chambre], [piece], [capacite], [salledeBain], [wc], [balcon], [airConditionne], [wifi], [minibar], [animaux], [piscine], [voiturier], [roomService], [idTypeLogement], [idProprietaire] FROM [Logement] WHERE [idLogement] = @id";
                     command.Parameters.AddWithValue("id", id);
                     connection.Open();
                     using (SqlDataReader reader = command.ExecuteReader())
